@@ -1,18 +1,19 @@
-import React from 'react';
-import Titulo from './components/titulo/tituloComponente';
-import Imagen from './components/imagenes/imagenComponente';
-import Descripcion from './components/descripcion/descripcionComponente';
-import './App.css'
+import React from "react";
+import RickAndMortyCharacterCard from "./components/RickAndMortyCharacter/RickAndMortyCharacterCard";
+import "./App.css";
 
 function App() {
   return (
-  <div className='card'>
- 
-      <div className='img'><Imagen url='./Rick.jpg' /></div>
-      <div className='circule'>Alive</div>
-      <div className='title'><Titulo titulo='Rick Sanchez' /></div>
-      <div className='details'><Descripcion genero='HUMAN' /></div>
-  </div>
+    <div>
+      <h1 className="title1">Personajes de Rick And Morty</h1>
+      <div className="position">
+      <RickAndMortyCharacterCard id={1}/>
+      <RickAndMortyCharacterCard id={2}/>
+      <RickAndMortyCharacterCard id={3}/> 
+      <RickAndMortyCharacterCard id={4}/>
+
+      </div>
+    </div>
   );
 }
 

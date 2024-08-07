@@ -1,4 +1,10 @@
-.card{
+
+.position{
+  display: flex;
+  justify-content: center; 
+  gap: 16px;
+}
+.card {
   background-color: hwb(107 28% 4%);
   border: 3px solid black;
   border-radius: 8px;
@@ -7,8 +13,9 @@
   margin: 14px;
 }
 
-.circule{ 
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.circule {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   border: 2px solid black;
   text-align: center;
   border-radius: 30px;
@@ -19,18 +26,24 @@
   position: relative;
 }
 
-.imgs{
+.imgs {
   width: 100%;
   border-bottom: 3px solid black;
 }
-.title{
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.title1 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 50px;
+  text-align: center;
+}
+.title {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 30px;
   text-align: center;
 }
 
 .details {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 15px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
   text-align: center;
 }
