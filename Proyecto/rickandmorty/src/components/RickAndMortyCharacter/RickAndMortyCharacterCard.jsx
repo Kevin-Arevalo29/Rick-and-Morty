@@ -1,32 +1,52 @@
 import React, {useState,useEffect} from 'react'
 import CharacterCard from "../character/characterCard";
 
-function RickAndMortyCharacterCard({ id }) {
-  const [name, setName] = useState("");
-  const [image, setImage] = useState("");
-  const [genre, setGenre] = useState("");
-  const [status, setStatus] = useState("");
+function RickAndMortyCharacterCard() {
+  const [characterList, setCharacterList] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [paginationInfo, setPaginationInfo] = useState({});
+
+
 
   useEffect(() => {
-    fetch(`https://rickandmortyapi.com/api/character/${id}`)
+    fetch(`https://rickandmortyapi.com/api/character/?page=${currentPage}`)
       .then((response) => response.json())
-      .then((result) => {
-        console.log(result,'result')
-        setName(result.name);
-        setImage(result.image);
-        setGenre(result.gender);
-        setStatus(result.status);
-    
+      .then((data) => {
+        console.log(data,'data')
+        setPaginationInfo(data.info)
+        setCharacterList(data.results)
       })
-  }, [id]);
+      .catch((error)=> console.error("Tienes un error", error))
+  }, [currentPage]);
 
   return (
-    <CharacterCard 
-      name={name}
-      image={image}
-      genre={genre}
-      status={status}
-    />
+    <div className="position">
+      {characterList.map((charater)=>(
+        <CharacterCard
+        name={charater.name}
+        image={charater.image}
+        genre={charater.genre}
+        status={charater.status}
+        />
+      ))}
+      <div >
+    <button className='button'
+        onClick={() => setCurrentPage(currentPage - 1)} 
+        disabled={!paginationInfo.prev}
+    >
+        Anterior
+    </button>
+    <span className='textb'>Página {currentPage} de {paginationInfo.pages}</span>
+    <button className='button'
+        onClick={() => setCurrentPage(currentPage + 1)} 
+        disabled={!paginationInfo.next}
+    >
+        Siguiente
+    </button>
+</div>
+      
+      </div>
+
   );
 }
 

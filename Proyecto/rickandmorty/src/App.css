@@ -1,12 +1,15 @@
-
+body{
+  background-image: url(./components/portal.jpg);
+  margin: auto;
+}
 .position{
-  display: flex;
-  justify-content: center; 
+  display:ruby;
+  justify-content: center;  
   gap: 16px;
 }
 .card {
   background-color: hwb(107 28% 4%);
-  border: 3px solid black;
+  border: 3px solid rgb(0, 255, 0);
   border-radius: 8px;
   box-shadow: 0 4px black;
   max-width: 200px;
@@ -15,11 +18,11 @@
 
 .circule {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   border: 2px solid black;
   text-align: center;
   border-radius: 30px;
-  width: 60px;
+  width: 80px;
   margin-left: 70px;
   margin-top: -15px;
   background-color: hwb(107 28% 4%);
@@ -34,8 +37,9 @@
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 50px;
   text-align: center;
+  color: white;
 }
-.title {
+.contenido {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 30px;
   text-align: center;
@@ -43,7 +47,26 @@
 
 .details {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  "Lucida Sans", Arial, sans-serif;
   font-size: 20px;
   text-align: center;
+}
+
+.button {
+  font-size: 20px;
+  background-color: black;
+  color: rgb(34, 255, 0);
+  border: 2px solid rgb(34, 255, 0);
+  justify-content: center;
+  margin: 16px 0;
+  
+}
+.textb{
+ color: rgb(90, 255, 8);
+ font-size: 20px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }

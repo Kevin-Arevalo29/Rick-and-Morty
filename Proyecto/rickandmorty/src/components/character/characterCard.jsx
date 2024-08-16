@@ -10,7 +10,7 @@ function CharacterCard(props){
  
         <div className='img'><Imagen url={props.image} /></div>
         <div className='circule'><Descripcion status={props.status} /></div>
-        <div className='title'><Titulo titulo={props.name} /></div>
+        <div className='contenido'><Titulo titulo={props.name} /></div>
         <div className='details'><Descripcion genero={props.genre} /></div>
         </div>
     )
