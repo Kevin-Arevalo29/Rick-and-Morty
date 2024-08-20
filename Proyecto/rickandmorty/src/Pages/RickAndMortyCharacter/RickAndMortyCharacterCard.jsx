@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from 'react'
-import CharacterCard from "../character/characterCard";
+import CharacterCard from "../../components/character/characterCard";
 
 function RickAndMortyCharacterCard() {
   const [characterList, setCharacterList] = useState([]);
@@ -20,7 +20,10 @@ function RickAndMortyCharacterCard() {
   }, [currentPage]);
 
   return (
+
     <div className="position">
+      <div className='title1'><h1>Personajes de Ric and Morty</h1></div>
+      <br />
       {characterList.map((charater)=>(
         <CharacterCard
         name={charater.name}

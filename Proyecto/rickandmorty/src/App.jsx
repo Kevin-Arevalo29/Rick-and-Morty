@@ -1,14 +1,21 @@
-import React from "react";
-import RickAndMortyCharacterCard from "./components/RickAndMortyCharacter/RickAndMortyCharacterCard";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
+import RickAndMortyCharacterCard from "./Pages/RickAndMortyCharacter/RickAndMortyCharacterCard";
+import HomePage from "./Pages/home/HomePage";
+import NotFontPage from "./Pages/NotFont/NotFontPage";
+// import Nav from "./components/navComponent/Nav";
 
 function App() {
-
   return (
     <div>
-      <h1 className="title1">Personajes de Rick And Morty</h1>
-      <RickAndMortyCharacterCard/>
-      
+      <Router>
+        {/* <Nav/> */}
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/Personajes" element={<RickAndMortyCharacterCard />} /> 
+          <Route path="/*" element={<NotFontPage />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

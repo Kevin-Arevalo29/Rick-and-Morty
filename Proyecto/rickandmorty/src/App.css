@@ -35,7 +35,7 @@ body{
 }
 .title1 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 50px;
+  font-size: 40px;
   text-align: center;
   color: white;
 }
@@ -69,4 +69,19 @@ body{
 button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+.error{
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 100px;
+  text-align: center;
+  color: rgb(217, 34, 34);
+}
+/* Estilos de Nav */
+.active{
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: aqua;;
+}
+.positionNav{
+  text-align: center;
 }
