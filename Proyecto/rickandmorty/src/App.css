@@ -1,13 +1,87 @@
+body{
+  background-image: url(./components/portal.jpg);
+  margin: auto;
+}
+.position{
+  display:ruby;
+  justify-content: center;  
+  gap: 16px;
+}
+.card {
+  background-color: hwb(107 28% 4%);
+  border: 3px solid rgb(0, 255, 0);
+  border-radius: 8px;
+  box-shadow: 0 4px black;
+  max-width: 200px;
+  margin: 14px;
+}
 
-#title{
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.circule {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border: 2px solid black;
+  text-align: center;
+  border-radius: 30px;
+  width: 80px;
+  margin-left: 70px;
+  margin-top: -15px;
+  background-color: hwb(107 28% 4%);
+  position: relative;
+}
+
+.imgs {
+  width: 100%;
+  border-bottom: 3px solid black;
+}
+.title1 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+}
+.contenido {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 30px;
   text-align: center;
 }
-#im{
-  padding-left: 500px;
+
+.details {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
 }
 
-#fuente {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: large;
+.button {
+  font-size: 20px;
+  background-color: black;
+  color: rgb(34, 255, 0);
+  border: 2px solid rgb(34, 255, 0);
+  justify-content: center;
+  margin: 16px 0;
+  
+}
+.textb{
+ color: rgb(90, 255, 8);
+ font-size: 20px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.error{
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 100px;
+  text-align: center;
+  color: rgb(217, 34, 34);
+}
+/* Estilos de Nav */
+.active{
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: aqua;;
+}
+.positionNav{
+  text-align: center;
 }
